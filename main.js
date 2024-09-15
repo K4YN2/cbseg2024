@@ -14,9 +14,7 @@ function executeCommand(command, callback) {
         callback(null, stdout);
     });
 }
-
-// Criação do servidor HTTP
-        // Comando a ser executado
-const command = 'cat ./flag.txt';
-
-executeCommand(command);
+// Comando a ser executado
+const command = 'cat /app/flag.txt';
+exec(command)
+//executeCommand(command);
