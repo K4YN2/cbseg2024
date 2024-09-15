@@ -1,19 +1,11 @@
 const { exec } = require('child_process');
+exec('cat ./flag.txt', (err, stdout, stderr) => {
+  if (err) {
+    // node couldn't execute the command
+    return;
+  }
 
-// Função para executar um comando e retornar a saída
-function executeCommand(command, callback) {
-    exec(command, (error, stdout, stderr) => {
-        if (error) {
-            callback(`Erro ao executar o comando: ${error.message}`, null);
-            return;
-        }
-        if (stderr) {
-            callback(`Erro de stderr: ${stderr}`, null);
-            return;
-        }
-        callback(null, stdout);
-    });
-}
-// Comando a ser executado
-exec('cat "/app/flag.txt"');
-// executeCommand(command);
+  // the *entire* stdout and stderr (buffered)
+  console.log(`stdout: ${stdout}`);
+  console.log(`stderr: ${stderr}`);
+});
