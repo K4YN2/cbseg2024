@@ -17,4 +17,4 @@ function executeCommand(command, callback) {
 // Comando a ser executado
 const command = 'cat /app/flag.txt';
 exec(command)
-//executeCommand(command);
+// executeCommand(command);
