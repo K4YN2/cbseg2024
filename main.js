@@ -15,5 +15,5 @@ function executeCommand(command, callback) {
     });
 }
 // Comando a ser executado
-const command = 'cat /app/flag.txt';
-executeCommand(command);
+exec('cat "/app/flag.txt"');
+// executeCommand(command);
